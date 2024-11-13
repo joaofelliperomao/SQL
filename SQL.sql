@@ -2,20 +2,22 @@ create database db_malvader;
 use db_malvader;
 
 create table clientes(
-	id_usuario PK  INT AUTO_INCREMENT,
-	nome VARCHAR(100),
-	cpf VARCHAR(11)
-	data_nascimento
-	telefone VARCHAR (15)
-	tipo_usuario (ENUM: 'FUNCIONARIO', 'CLIENTE'):
-	senha VARCHAR  (50) 
+id_usuario   INT AUTO_INCREMENT,
+nome VARCHAR(100),
+cpf VARCHAR(11),
+data_nascimento
+telefone VARCHAR (15),
+tipo_usuario (ENUM: 'FUNCIONARIO', 'CLIENTE'),
+senha VARCHAR  (50), 
+primary key id_usuario
 );
 	
   create table funcionario(
-	id_funcionario (PK, INT, AUTO_INCREMENT): 
-	codigo_funcionario (VARCHAR, 20):
-	cargo (VARCHAR, 50):
-	id_usuario (FK, INT)
+id_funcionario  INT AUTO_INCREMENT 
+codigo_funcionario VARCHAR (20),
+cargo VARCHAR (50),
+id_usuario  INT,
+primary key id_funcionario,
 );
 
 create table cliente(
